@@ -1,8 +1,11 @@
-import { getElementById } from 'domutils';
 import React from 'react';
-import ReactDom from 'react-dom';
+import {render} from 'react-dom';
+import RepLogApp from './RepLog/RepLogApp'; 
+// const elem = React.createElement('h2',null,'Lift History',
+//     React.createElement('span', null, ' ❤️'));
 
-const elem = React.createElement('h2',null,'Lift History',
-    React.createElement('span', null, ' ❤️'));
+const shouldShowHeart = true;
 
-ReactDom.render(elem,document.getElementById('lift-stuff-app'));
+render(<RepLogApp 
+        withHeart={shouldShowHeart}/>,
+        document.getElementById('lift-stuff-app'));
